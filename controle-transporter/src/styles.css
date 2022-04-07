@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ng-valid[required], .ng-valid.requerid{
+    border-left: 5px solid #42a943;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+}
+
+/* Estilização dos Inputs globais do sistema*/
