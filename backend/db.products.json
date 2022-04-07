@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "caneta",
+      "id": 1
+    },
+    {
+      "cidades": []
+    }
+    
+  ],
+  "moveis": [
+    {
+      "name": "mesa",
+      "price": "100,00",
+      "id": 1
+    }
+  ],
+  "cidades":[
+    {
+      "name": "Simão Dias",
+      "uf": "SE",
+      "pais": "Brasil"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "email": "brunobatista.fla@gmail.com",
+      "password": "$2a$10$M4uwMsxX3Y5FGKjR5yznv.x0s.yTeSdE.dVE7B0d/ZiCme1.X/Q86",
+      "id": 1
+    },
+    {
+      "email": "brunobatysta.fla@gmail.com",
+      "password": "$2a$10$6THlHCVxti7h/PtiaI8XHOzVsDcS1lJ.lPHA.9EouLF8vRHwwwmie",
+      "id": 2
+    },
+    {
+      "email": "bruno.bsantos.fla@gmail.com",
+      "password": "$2a$10$Ra0.LxvHx5w6/D6xh70j/O9qALvk3gctUoNCHJER8Bn6J33x5FRy6",
+      "name": "Bruno",
+      "sobrenome": "Batista Santos",
+      "cpf": "07193879570",
+      "id": 3
+    },
+    {
+      "email": "rabelo@gmail.com",
+      "password": "$2a$10$2m81i5UR0QIFisXqq59LBeeC9iMQ7jplm5K6bwMOv4KgRE.7G2GPO",
+      "name": "Rabelo",
+      "Sobreno": "Araujo",
+      "id": 4
+    },
+    {
+      "email": "rabelwo@gmail.com",
+      "password": "$2a$10$JmUwKoi24jRq6gQs0Isq4uQVyN/6eesJ2Wkwp7Hu.4ejDQh3pQyxK",
+      "name": "Rabelo",
+      "Sobreno": "Araujo",
+      "id": 5
+    },
+    {
+      "email": "maria@gmail.com",
+      "password": "$2a$10$hgAJTnubXIrV.B.68yZh0uDMxPzq4P8qqQ0qXgE.ZdY1eEyBMFTwu",
+      "name": "Maria",
+      "sobrenome": "Santos",
+      "cpf": "99999999999",
+      "Confirmeemail": "maria@gmail.com",
+      "Confirmesenha": "12345",
+      "id": 6
+    }
+  ]
+}
