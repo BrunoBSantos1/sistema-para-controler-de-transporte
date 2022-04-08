@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgProgress } from '@ngx-progressbar/core';
+import { ProgressBarService } from '../../services/progress-bar.service';
 
 
 @Component({
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public progressBar: ProgressBarService,
+    private progress: NgProgress
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.progressBar.progressRef = this.progress.ref('progressBar');
   }
 
 }
