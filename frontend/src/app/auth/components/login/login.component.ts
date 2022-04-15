@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserLogin } from '../../models/user-login';
 import { ProgressBarService } from 'src/app/shared/services/progress-bar.service';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    public progressBar: ProgressBarService
+    public progressBar: ProgressBarService,
+    private alertService: AlertService
   ) { }
 
   ngOnInit(): void {
@@ -27,13 +29,16 @@ export class LoginComponent implements OnInit {
   submitLogin() {
     this.progressBar.startLoading();
     const loginObserver = {
-        next: x => {console.log('User logged in')
-        this.progressBar.completeLoading();
-        this.progressBar.setSuccess();
+        next: x => {
+          this.progressBar.setSuccess();
+          this.alertService.success('Login efetuado com sucesso!');
+          this.progressBar.completeLoading();
+        
       },
       error: err => {
         this.progressBar.setError();
         console.log(err)
+        this.alertService.danger(err.error);
         this.progressBar.completeLoading();
       }
     }

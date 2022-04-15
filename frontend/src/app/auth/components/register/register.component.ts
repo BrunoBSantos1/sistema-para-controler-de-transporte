@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AlertService } from 'ngx-alerts';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ProgressBarService } from 'src/app/shared/services/progress-bar.service';
 import { Usuario } from '../../models/usuario';
@@ -21,7 +22,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    public progressBar: ProgressBarService
+    public progressBar: ProgressBarService,
+    private alertService: AlertService
   ) { }
 
   ngOnInit(): void {
@@ -31,13 +33,14 @@ export class RegisterComponent implements OnInit {
     this.progressBar.startLoading();
     const registerObserver = {
       next: x => {
-        console.log('Usuário Criado com sucesso')
-        this.progressBar.completeLoading();
         this.progressBar.setSuccess();
+        this.alertService.success('Usuario cadastrado com sucesso!');
+        this.progressBar.completeLoading();
       },
       error: err => {
         this.progressBar.setError();
         console.log(err)
+        this.alertService.danger(err.error);
         this.progressBar.completeLoading();
       }
     }

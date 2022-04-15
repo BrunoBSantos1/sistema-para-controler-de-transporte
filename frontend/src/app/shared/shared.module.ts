@@ -5,7 +5,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ColumnOneComponent } from './layouts/column-one/column-one.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 
-
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AlertModule } from 'ngx-alerts';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import { NgProgressModule } from '@ngx-progressbar/core';
   imports: [
     CommonModule,
     RouterModule,
-    NgProgressModule
+    NgProgressModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AlertModule.forRoot({maxMessages: 5, timeout: 5000})
   ],
   exports: [
     ColumnOneComponent
