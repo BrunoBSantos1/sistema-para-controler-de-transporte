@@ -1,6 +1,5 @@
 import { AuthService } from './../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { UserLogin } from '../../models/user-login';
 import { ProgressBarService } from 'src/app/shared/services/progress-bar.service';
 import { AlertService } from 'ngx-alerts';
@@ -18,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     public progressBar: ProgressBarService,
     private alertService: AlertService
   ) { }

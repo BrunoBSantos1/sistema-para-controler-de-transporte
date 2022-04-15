@@ -6,21 +6,35 @@
     <div class="nav justify-content-end" id="navbarNav">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['login']">Login</a>
+          <a class="nav-link active" 
+            *ngIf="authService.isLogged();"
+            aria-current="page" 
+            [routerLink]="['login']">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['register']">Cadastre-se</a>
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['register']">Usuario</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ajuda</a>
+          <a class="nav-link disabled" 
+            href="#" 
+            tabindex="-1" 
+            aria-disabled="true">Ajuda</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Perfil
+        <li class="nav-item dropdown"
+        *ngIf="!authService.isLogged();">
+          <a class="nav-link dropdown-toggle"  
+            href="#" id="navbarDropdown" 
+            role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false">
+              Perfil
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="['reset-passaword']">Resetar Senha</a></li>
-            <li><a class="dropdown-item" href="#">Sair</a></li>
+            <li><a class="dropdown-item"
+              (click)="logout()">
+              Sair</a></li>
           </ul>
         </li>
       </ul>
