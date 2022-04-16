@@ -9,12 +9,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AlertModule } from 'ngx-alerts';
 import { DeshboardComponent } from './deshboards/deshboard/deshboard.component';
+import { CadastroPassageiroComponent } from './components/cadastroPassageiro/cadastro-passageiro/cadastro-passageiro.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     ColumnOneComponent,
-    DeshboardComponent
+    DeshboardComponent,
+    CadastroPassageiroComponent,
   ],
   imports: [
     CommonModule,
