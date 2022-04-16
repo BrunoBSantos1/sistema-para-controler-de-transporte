@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NgProgress } from '@ngx-progressbar/core';
 import { AuthService } from '../../services/auth.service';
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     public progressBar: ProgressBarService,
     private progress: NgProgress,
-    public authService: AuthService
+    public authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
+    this.router.navigate(['login'])
   }
 
 }

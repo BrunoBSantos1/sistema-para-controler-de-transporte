@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { UserLogin } from '../../models/user-login';
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     public authService: AuthService,
     public progressBar: ProgressBarService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -42,5 +44,6 @@ export class LoginComponent implements OnInit {
       }
     }
     this.authService.login(this.userLogin).subscribe(loginObserver);
+    this.router.navigate(['deshboard'])
   }
 }
