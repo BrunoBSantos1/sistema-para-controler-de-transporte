@@ -8,11 +8,13 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AlertModule } from 'ngx-alerts';
+import { DeshboardComponent } from './deshboards/deshboard/deshboard.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    ColumnOneComponent
+    ColumnOneComponent,
+    DeshboardComponent
   ],
   imports: [
     CommonModule,
