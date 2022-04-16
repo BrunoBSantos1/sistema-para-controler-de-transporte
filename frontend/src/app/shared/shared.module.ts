@@ -27,7 +27,8 @@ import { CadastroPassageiroComponent } from './components/cadastroPassageiro/cad
     AlertModule.forRoot({maxMessages: 5, timeout: 5000})
   ],
   exports: [
-    ColumnOneComponent
+    ColumnOneComponent,
+    CadastroPassageiroComponent
   ]
 })
 export class SharedModule { }
