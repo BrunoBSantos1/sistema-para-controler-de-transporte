@@ -17,6 +17,31 @@
             [routerLink]="['register']">Usuario</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['']">Passageiro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['']">Motorista</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['']">Veiculo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['']">Transporte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+          *ngIf="!authService.isLogged();" 
+            [routerLink]="['']">Relatorio</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link disabled" 
             href="#" 
             tabindex="-1" 
