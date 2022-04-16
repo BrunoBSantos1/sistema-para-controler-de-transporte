@@ -16,7 +16,7 @@ import { CadastroPassageiroComponent } from './components/cadastroPassageiro/cad
     HeaderComponent,
     ColumnOneComponent,
     DeshboardComponent,
-    CadastroPassageiroComponent,
+    CadastroPassageiroComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +28,6 @@ import { CadastroPassageiroComponent } from './components/cadastroPassageiro/cad
   ],
   exports: [
     ColumnOneComponent,
-    CadastroPassageiroComponent
   ]
 })
 export class SharedModule { }
